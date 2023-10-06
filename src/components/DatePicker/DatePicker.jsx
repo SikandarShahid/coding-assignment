@@ -1,11 +1,11 @@
 import React, { forwardRef, useEffect, useState } from "react";
 import "./DatePicker.scss";
 import { ErrorMessage, Field } from "formik";
-import CalendarIcon from "../../assets/calendarIcon.svg";
-import Modal from "../Modal";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import moment from "moment";
+import CalendarIcon from "../../assets/calendarIcon.svg";
+import Modal from "../Modal";
 
 const DatePickerModal = ({
   isOpen,
