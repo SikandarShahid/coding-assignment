@@ -1,0 +1,75 @@
+@import "../../scss/main";
+
+.addEmployee {
+  height: calc(var(--vh, 1vh) * 100 - 60px);
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100%;
+    min-height: fit-content;
+    justify-content: space-between;
+  }
+
+  .addEmployee_inputs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+
+    @include md {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .addEmployee_datePickers {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+
+    @include xs {
+      gap: 0.5rem;
+      
+    }
+
+    & > img {
+      height: 1.25rem;
+    }
+
+    & > div {
+      flex: 1;
+    }
+  }
+
+  footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    padding: 12px 1rem;
+    border-top: 2px solid $GreyColor;
+
+    @include md {
+      margin-left: -1rem;
+      width: 100vw;
+    }
+
+    button {
+      height: 2.5rem;
+      border-radius: 6px;
+      background-color: $PrimaryColor;
+      color: $WhiteColor;
+      padding: 0 1.25rem;
+      font-size: 14px;
+      font-weight: 500;
+      border: none;
+      outline: none;
+      cursor: pointer;
+
+      &:first-child {
+        background-color: $LightBlue;
+        color: $PrimaryColor;
+      }
+    }
+  }
+}

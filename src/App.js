@@ -1,25 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import AppRoutes from "./routes";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const vh = window.innerHeight * 0.01;
+window.document.documentElement.style.setProperty("--vh", `${vh}px`);
+
+window.visualViewport.addEventListener("resize", (event) => {
+  let vh = (event.target.height + event.target.offsetTop) * 0.01;
+  window?.document.documentElement.style.setProperty("--vh", `${vh}px`);
+});
+
+const App = () => {
+  return <AppRoutes />;
+};
 
 export default App;

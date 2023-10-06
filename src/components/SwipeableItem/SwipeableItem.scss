@@ -1,0 +1,96 @@
+@import "../../scss/main";
+
+.DataList {
+  padding: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+
+  h4 {
+    font-size: 1rem;
+    font-weight: 500;
+    color: $TextColor;
+    line-height: 1.1;
+  }
+
+  p {
+    font-size: 14px;
+    color: $Grey3Color;
+    margin: 0;
+    line-height: 1.1;
+  }
+
+  h6 {
+    font-size: 12px;
+    color: $Grey3Color;
+    margin: 0;
+    line-height: 1.1;
+    font-weight: normal;
+  }
+}
+
+.DataList > :nth-child(2) {
+  font-size: 15px;
+}
+.List {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+}
+.ListItem {
+  width: 100%;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: $WhiteColor;
+  color: $TextColor;
+  height: 100%;
+  display: flex;
+}
+
+.Background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 16px;
+  color: white;
+  background-color: $RedColor;
+  box-sizing: border-box;
+  padding-right: 30px;
+
+  img {
+    height: 1.5rem;
+  }
+}
+
+.Wrapper {
+  position: relative;
+  transition: max-height 0.2s ease;
+  max-height: 1000px;
+  transform-origin: top;
+  overflow: hidden;
+  width: 100%;
+  cursor: pointer;
+  font-size: 18px;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid $GreyColor;
+  }
+}
+.BouncingListItem {
+  transition: transform 0.2s ease-out;
+  width: 100%;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: $WhiteColor;
+  height: 100%;
+  display: flex;
+  z-index: 1;
+  position: relative;
+  color: $TextColor;
+}

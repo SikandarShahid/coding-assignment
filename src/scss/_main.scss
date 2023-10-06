@@ -1,0 +1,69 @@
+$PrimaryColor: #1da1f2;
+$GreyColor: #f2f2f2;
+$Grey2Color: #e5e5e5;
+$Grey3Color: #949c9e;
+$TextColor: #323238;
+$WhiteColor: #ffffff;
+$BlackColor: #000000;
+$ErrorColor: #e63946;
+$LightBlue: #edf8ff;
+$RedColor:#F34642;
+
+// media queries
+
+// extra small
+
+$screen-xs-min: 425px;
+
+$screen-sm-min: 576px;
+
+// Small tablets (portrait view)
+$screen-md-min: 767px;
+
+// Tablets and small desktops
+$screen-lg-min: 992px;
+
+// Large tablets and desktops
+$screen-xl-min: 1200px;
+
+// extra Large tablets and desktops
+$screen-xxl-min: 1400px;
+
+@mixin xs {
+  @media (max-width: #{$screen-xs-min}) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media (max-width: #{$screen-sm-min}) {
+    @content;
+  }
+}
+
+// Medium devices
+@mixin md {
+  @media (max-width: #{$screen-md-min}) {
+    @content;
+  }
+}
+
+// Large devices
+@mixin lg {
+  @media (max-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+
+// Extra large devices
+@mixin xl {
+  @media (max-width: #{$screen-xl-min}) {
+    @content;
+  }
+}
+//Extra Extra large devices
+@mixin xxl {
+  @media (max-width: #{$screen-xxl-min}) {
+    @content;
+  }
+}
